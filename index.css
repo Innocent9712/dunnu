@@ -1,0 +1,581 @@
+/* resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variables */
+:root {
+ --white: #FFFFFF;
+ --brown: #DBBBA8;
+ --brown-dark: #707070;
+ --blue: #1530c9;
+ --blue-light: #C3D5FF;
+
+}
+
+/* defaults */
+body {
+    padding-top: 100px; 
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 8px;
+}
+
+
+
+header {
+    background: var(--brown);
+    height: 82px;
+    position: fixed;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    box-shadow: 0 1px 25px rgba(0,0,0, .1);
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+#nav {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+#nav h1 {
+    color: var(--blue);
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+
+#nav > div.desktop {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#nav > div.mobile {
+    display: none;
+
+}
+
+#nav > div.desktop button {
+    padding: 0.7rem 1rem;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 600;
+}
+#nav div.desktop ul {
+    display: flex;
+    gap: 1rem;
+}
+
+#nav div.desktop ul li button {
+    background-color: transparent;
+    color: var(--brown-dark);
+}
+.hide {
+	top: -82px;
+}
+
+
+.hero .content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-img {
+    flex-basis: 44%;
+}
+
+.hero-img img {
+    width: 100%;
+}
+
+.hero-text {
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+.hero-text .polkadot {
+    height: 100%;
+    width: 250px;
+    position: absolute;
+    background-image: url("./assets/polkadot_1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 50%;
+    top: 15%;
+}
+
+.title h2 {
+    color: var(--blue);
+}
+
+.hero-text .title h2 {
+    font-size: 1.8rem;
+}
+
+.title > div {
+    height: 4px;
+    background-color: var(--brown);
+}
+.hero-text .title > div {
+    width: 73px;
+}
+
+.hero-text article {
+    width: 50%;
+    font-size: 0.8rem;
+    color: var(--brown-dark);
+}
+
+.hero-text article p {
+    font-size: 1.4em;
+    margin-block: 1.6rem;
+    line-height: 1.8rem;
+}
+
+.hero-text button {
+    width: 8rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.hero >  div:last-child {
+    margin-top: 4rem;
+    max-width: 500px;
+    width: 80%;
+    height: 2px;
+    margin-inline: auto;
+    background-color: var(--brown-dark);
+}
+
+.services,
+.products,
+.contact-us {
+    margin-top: 6rem;
+    padding-inline: 2rem;
+}
+
+.services .title,
+.products .title,
+.contact-us .title  {
+    margin-inline: 3rem;
+}
+
+.services .title > h2,
+.products .title > h2,
+.contact-us .title > h2 {
+    font-size: 1.8em;
+}
+
+.services .title div,
+.products .title div,
+.contact-us .title div {
+    width: 72px;
+}
+
+.services .worker {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.services .worker h3 {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--brown-dark);
+    margin-left: 4rem;
+}
+
+.services .worker div {
+    width: 1.9rem;
+}
+
+.services .worker div img {
+    width: 100%;
+}
+
+.services ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    row-gap: 2rem;
+    column-gap: 5rem;
+    margin-bottom: 2rem;
+    width: 90%;
+    margin-inline: auto;
+    max-width: 1400px;
+}
+
+.services ul li {
+    flex-basis: 43%;
+    background-color: var(--blue-light);
+    min-height: 200px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    border-radius: 5px;
+}
+
+.services ul li p {
+    width: 80%;
+    margin: auto;
+}
+
+.sub-service-section {
+    margin-top: 4rem;
+    max-width: 1500px;
+    margin-inline: auto;
+    position: relative;
+}
+
+
+.sub-service-section > div:last-child {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-image: url("./assets/polkadot_2.png");
+    left: 85%;
+    top: 5%;
+    transform: rotate(120deg);
+}
+
+.products ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 4rem;
+    width: 90%;
+    max-width: 1200px;
+    margin-inline: auto;
+    
+}
+
+.products ul li {
+    flex-basis: 30%;
+}
+
+.products ul li figure div {
+    background-color: var(--blue-light);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 2rem;
+    height: 300px;
+    width: 100%;
+}
+
+.products ul li figure div img {
+    width: 200px;
+}
+
+.products ul li figure figcaption {
+    color: var(--brown-dark);
+}
+
+.products ul li figure figcaption h4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.3em;
+}
+
+.products ul li figure figcaption p {
+    font-size: 0.9em;
+}
+
+.contact-us > div:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 6rem;
+    width: 80%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.info {
+    flex-basis: 45%;
+}
+
+.info h4 {
+    color: var(--brown-dark);
+    font-size: 1.6em;
+}
+
+.info > p {
+    color: var(--brown-dark);
+    font-size: 0.9em;
+    margin-block: 1rem;
+}
+
+.info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.info ul li {
+    display: flex;
+    align-items: flex-start;
+}
+
+.info ul li p {
+    margin-left: 1rem;
+    color: var(--brown-dark);
+    font-size: 0.9em;
+}
+
+.info .polkadot {
+    margin-top: 2rem;
+    height: 350px;
+    width: 100%;
+    background-image: url('./assets/polkadot_1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 6%;
+    flex-basis: 45%;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+}
+
+form textarea {
+    resize: none;
+}
+
+form label {
+    margin-bottom: 0.6rem;
+    display: inline-block;
+}
+
+form >  div:nth-of-type(1),
+form >  div:nth-of-type(2) {
+    flex-basis: 47%;
+}
+
+form > div {
+    flex-basis:  100%;
+    margin-block: 0.6rem;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-width: 3px;
+}
+
+form button {
+    padding: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+form > p {
+    margin-top: 1rem;
+    font-style: italic;
+    font-size: 0.9em;
+    color: var(--brown-dark);
+}
+
+footer {
+    margin-top: 5rem;
+    background-color: var(--brown);
+}
+
+footer p {
+    text-align: center;
+    color: var(--brown-dark);
+    padding-block: 3rem;
+}
+
+@media screen and (max-width: 770px) {
+    .hero-img {
+        flex-basis: 54%;
+    }
+
+    .hero-text {
+        flex-basis: 45%;
+    }
+
+    .hero-text .polkadot {
+        width: 200px;
+        left: 44%;
+        opacity: 0.7;
+
+    }
+
+    
+    .hero .content .hero-text article {
+        width: 80%;
+    }
+
+    .hero .content .hero-text article p {
+        font-size: 1.1em;
+    }
+    
+    .services {
+        padding-inline: 2rem;
+    }
+
+    .services ul {
+        column-gap: 3rem;
+        row-gap: 1rem;
+    }
+    
+    .services ul li p {
+        font-size: 1em;
+    }
+
+    .products ul li {
+        flex-basis: 42%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    #nav > div.desktop {
+        display: none;
+
+    }
+
+    #nav > div.mobile {
+        display: block;
+    }
+
+    #nav {
+        position: relative;
+    }
+
+    .mobile-nav {
+        position: absolute;
+        width: 100vw;
+        left: -12.5%;
+        padding: 2rem;
+        background: var(--brown);
+        transition: top 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-nav > a {
+        margin-inline: auto;
+        display: inline-block;
+    }
+
+    .mobile-nav > a button {
+        padding: 1rem;
+    }
+
+    .mobile-nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-nav ul li {
+        width: 100%;
+        margin-block: 0.7rem;
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .show-mobile {
+        top: 130%;
+    }
+    
+    .hide-mobile {
+        top: -2000%;
+    }
+
+    .mobile-nav ul li button{
+        width: 50%;
+        padding-block: 0.7rem;
+        font-size: 1.1em;
+        background: transparent;
+    }
+
+    .hero .content .hero-text {
+        margin-inline: 2rem;
+        margin-top: 4rem;
+    }
+
+    .hero-text .polkadot {
+        display: none;
+    }
+
+    .services .title,
+    .products .title,
+    .contact-us .title  {
+        margin-inline: 0;
+    }
+
+    .sub-service-section > div:last-child {
+        display: none;
+    }
+
+    .services .worker h3 {
+        margin-left: 0;
+    }
+
+    .hero .content {
+        flex-direction: column;
+    }
+
+    .hero .content .hero-text article {
+        width: 100%;
+    }
+
+    .services ul li {
+        flex-basis: 100%;
+    }
+
+    .products ul li {
+        flex-basis: 100%;
+    }
+
+    .contact-us > div:last-child {
+        flex-direction: column;
+    }
+
+    .info .polkadot {
+        display: none;
+    }
+
+}
